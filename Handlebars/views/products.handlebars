@@ -1,0 +1,52 @@
+   
+<div class="mb-6">
+    <form action="/" method="get">
+        <button type="submit" class="button is-primary">Crear mas productos</button>
+    </form>
+    
+</div>
+     
+        
+            <div class="columns is-desktop is-multiline">
+                
+
+ {{#if emptyList}}
+     <div class="column is-centered">
+                            <p class="title is-centered">La lista esta vacia</p>                        
+                      </div>
+  
+
+  {{else}}
+
+ {{#each products}}
+         <div class="column is-2">
+                            <div class="card">
+                                <div class="card-image">
+                                <figure class="image is-4by3">
+                                   <img src='{{image}}'   alt="Placeholder image">
+                                 </figure>
+                               </div>
+                               <div class="card-content">
+                                 <div class="media">                               
+                                   <div class="media-content">
+                                     <p class="title is-4">Nombre:  {{name}} </p>
+                                     <p class="subtitle is-6"> Precio: {{price}}</p>
+                                   </div>
+                                 </div>                     
+                               </div>
+                             </div>
+                        </div>                                        
+                
+  {{/each}}
+
+{{/if}}
+
+
+                
+                   
+
+              
+                <!-- Column -->
+              </div>
+
+           
