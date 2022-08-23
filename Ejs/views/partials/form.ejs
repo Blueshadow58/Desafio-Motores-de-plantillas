@@ -1,49 +1,62 @@
-
-
-    <div class="columns is-mobile   is-centered">
-      <div class="column is-one-quarter  ">
-          
-        <form action="/productos" method="post">
-
-          <div class="field">
-            <label class="label">Nombre</label>
-            <div class="control">
-              <input class="input" name="name" type="text" placeholder="Nombre" >
-            </div>
-          </div>
-      
-          <div class="field">
-            <label class="label">Precio</label>
-            <div class="control">
-              <input class="input" name="price" type="number" placeholder="Precio" >
-            </div>
-          </div>
-          
-          <div class="field">
-            <label class="label">Imagen</label>
-            <div class="control">
-              <input class="input" name="image" type="text" placeholder="Url de la imagen" >
-            </div>
-          </div>
-          
-
-          <div class="buttons is-grouped  is-centered">
-            
-              <button type="submit" value="POST" onclick="updateMethod(this)" class="button is-link is-rounded">Enviar</button>
-           
-          
-              <button type="submit" value="GET" onclick="updateMethod(this)" class="button is-primary is-rounded">Ver productos</button>
-           
-          </div>
-          
-         
-        </form>
-        
-        <script>
-           async function updateMethod  (elem)  {    
-       elem.form.setAttribute("method", elem.value);
-         }
-       </script>
-
+<div class="columns is-mobile is-centered">
+  <div class="column is-one-quarter">
+    <form action="/productos" method="post">
+      <div class="field">
+        <label class="label">Nombre</label>
+        <div class="control">
+          <input class="input" name="name" type="text" placeholder="Nombre" />
+        </div>
       </div>
-    </div>
+
+      <div class="field">
+        <label class="label">Precio</label>
+        <div class="control">
+          <input
+            class="input"
+            name="price"
+            type="number"
+            placeholder="Precio"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Imagen</label>
+        <div class="control">
+          <input
+            class="input"
+            name="image"
+            type="text"
+            placeholder="Url de la imagen"
+          />
+        </div>
+      </div>
+
+      <div class="buttons is-grouped is-centered">
+        <button
+          type="submit"
+          value="POST"
+          onclick="updateMethod(this)"
+          class="button is-link is-rounded"
+        >
+          Enviar
+        </button>
+
+        <button
+          type="submit"
+          value="GET"
+          onclick="updateMethod(this)"
+          class="button is-primary is-rounded"
+        >
+          Ver productos
+        </button>
+      </div>
+    </form>
+
+    <script>
+      async function updateMethod(elem) {
+        elem.form.setAttribute("method", elem.value);
+      }
+    </script>
+  </div>
+</div>

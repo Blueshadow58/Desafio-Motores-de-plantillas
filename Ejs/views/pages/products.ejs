@@ -1,81 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <%- include('../partials/head.ejs') -%>
-</head>
-<body>
+  </head>
+  <body>
     <section class="hero is-fullheight">
-        
-        <div class="hero-body has-text-centered">
-            
+      <div class="hero-body has-text-centered">
+        <div class="container">
+          <div class="mb-6">
+            <form action="/" method="get">
+              <button type="submit" class="button is-primary">
+                Crear mas productos
+              </button>
+            </form>
+          </div>
 
-          <div class="container"> 
-            
-            
-<div class="mb-6">
-    <form action="/" method="get">
-        <button type="submit" class="button is-primary">Crear mas productos</button>
-    </form>
-    
-</div>
-     
-        
-            <div class="columns is-desktop is-multiline">
-                
-                <% if (emptyList) { %>
-                    <div class="column is-centered">
-                            <p class="title is-centered">La lista esta vacia</p>                        
-                      </div>
-                    
-                    
-                  <% } else { %>
-                    <% for (var i = 0; i < products.length; i++) { %>                    
-                        <div class="column is-2">
-                            <div class="card">
-                                <div class="card-image">
-                                <figure class="image is-4by3">
-                                   <img src='<%= products[i].image %>'   alt="Placeholder image">
-                                 </figure>
-                               </div>
-                               <div class="card-content">
-                                 <div class="media">                               
-                                   <div class="media-content">
-                                     <p class="title is-4">Nombre:  <%= products[i].name %>  </p>
-                                     <p class="subtitle is-6"> Precio: <%= products[i].price %></p>
-                                   </div>
-                                 </div>                     
-                               </div>
-                             </div>
-                        </div>                                        
-                    <% } %>
-                   
+          <div class="columns is-desktop is-multiline">
+            <% if (emptyList) { %>
+            <div class="column is-centered">
+              <p class="title is-centered">La lista esta vacia</p>
+            </div>
 
-                    <% } %>
-                  
-
-              
-                <!-- Column -->
+            <% } else { %> <% for (var i = 0; i < products.length; i++) { %>
+            <div class="column is-2">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-4by3">
+                    <img
+                      src="<%= products[i].image %>"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-4">Nombre: <%= products[i].name %></p>
+                      <p class="subtitle is-6">
+                        Precio: <%= products[i].price %>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+            <% } %> <% } %>
 
-           
-
-
-
-
-
-
-
-
-
-
-
-
+            <!-- Column -->
           </div>
         </div>
-      </section>
-</body>
+      </div>
+    </section>
+  </body>
 </html>
